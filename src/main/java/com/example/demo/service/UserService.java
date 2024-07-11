@@ -32,7 +32,7 @@ public class UserService {
     public User getUserById(Long id) {
         return userRepository.findById(id).orElse(null);
     }
-    public User updateStudentRecord(Long id, User updateduser) {
+    public User updateUSer(Long id, User updateduser) {
         return userRepository.findById(id).map(user -> {
         	user.setName(updateduser.getName());
         	user.setEmail(updateduser.getEmail());
